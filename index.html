@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Solutions Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Web Solutions Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="scrollToSection('services')">Services</a></li>
+                <li><a href="#" onclick="scrollToSection('about')">About</a></li>
+                <li><a href="#" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section id="hero">
+    <div class="hero-content">
+        <h2>Welcome to Web Solutions Portal</h2>
+        <p>Basic and attractive website built using HTML, CSS and JavaScript.</p>
+        <button class="hero-button" onclick="showMessage()">Get Started</button>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Web Design">
+        <p>Web Design</p>
+    </div>
+
+    <div class="service-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JavaScript">
+        <p>JavaScript Basics</p>
+    </div>
+
+    <div class="service-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Responsive">
+        <p>Responsive Layout</p>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+    <h2>About Us</h2>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=60" class="about-img" alt="About Image">
+    <p>
+        Web Solutions Portal is a basic interactive website developed to demonstrate
+        fundamental web development concepts using HTML, CSS, and JavaScript.
+    </p>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <!-- Contact Details -->
+    <p><strong>Email:</strong> contact@websolutionsportal.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Location:</strong> Andhra Pradesh, India</p>
+
+    <br>
+
+    <!-- Contact Form -->
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name"><br><br>
+        <textarea id="message" placeholder="Your Message"></textarea><br><br>
+        <input type="submit" value="Send Message">
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Web Solutions Portal. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
