@@ -3,94 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Solutions Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="header-content">
-        <h1>Web Solutions Portal</h1>
-
-        <nav>
-            <ul>
-                <li><a href="#" onclick="scrollToSection('hero')">Home</a></li>
-                <li><a href="#" onclick="scrollToSection('services')">Services</a></li>
-                <li><a href="#" onclick="scrollToSection('about')">About</a></li>
-                <li><a href="#" onclick="scrollToSection('contact')">Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- Dark Mode Button -->
-        <button onclick="toggleDarkMode()">🌙</button>
-    </div>
+    <h1>Web Solutions Portal</h1>
 </header>
 
 <!-- HERO -->
-<section id="hero">
-    <div class="hero-content">
-        <h2>Welcome to Web Solutions Portal</h2>
-        <p id="typing-text">Basic and attractive website built using HTML, CSS and JavaScript.</p>
-        <button class="hero-button" onclick="showMessage()">Get Started</button>
+<section class="hero">
+    <div class="hero-text">
+        <h2>Build <span>Modern Websites</span></h2>
+        <p>Interactive, responsive and user-friendly solutions</p>
+        <button onclick="goToLogin()">Get Started</button>
     </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section class="services">
     <h2>Our Services</h2>
 
-    <div class="service-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
-        <p>Web Design</p>
-    </div>
+    <div class="cards">
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+            <p>Web Design</p>
+        </div>
 
-    <div class="service-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png">
-        <p>JavaScript Basics</p>
-    </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png">
+            <p>JavaScript</p>
+        </div>
 
-    <div class="service-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">
-        <p>Responsive Layout</p>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">
+            <p>Responsive UI</p>
+        </div>
     </div>
-
-    <!-- Counter -->
-    <h3>Projects Completed: <span id="counter">0</span></h3>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
+<section class="about">
     <h2>About Us</h2>
-
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="about-img">
-
-    <p>
-        Web Solutions Portal is a basic interactive website developed to demonstrate
-        fundamental web development concepts using HTML, CSS, and JavaScript.
-    </p>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+    <p>This project demonstrates modern UI using HTML, CSS and JavaScript.</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-    <h2>Contact Us</h2>
+<section class="contact">
+    <h2>Contact</h2>
 
-    <p><strong>Email:</strong> contact@websolutionsportal.com</p>
-    <p><strong>Phone:</strong> +91 98765 43210</p>
-    <p><strong>Location:</strong> Andhra Pradesh, India</p>
-
-    <br>
-
-    <form onsubmit="return validateForm()">
-        <input type="text" id="name" placeholder="Your Name"><br><br>
-        <textarea id="message" placeholder="Your Message"></textarea><br><br>
-        <input type="submit" value="Send Message">
-    </form>
+    <input type="text" id="name" placeholder="Your Name">
+    <textarea id="message" placeholder="Your Message"></textarea>
+    <button onclick="validateForm()">Send Message</button>
 </section>
 
 <footer>
-    <p>© 2025 Web Solutions Portal. All rights reserved.</p>
+    <p>© 2025 Web Solutions Portal</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
