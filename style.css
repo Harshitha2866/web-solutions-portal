@@ -1,138 +1,47 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* NAV ACTIVE */
+nav ul li a.active {
+    border-bottom: 2px solid #ee6c4d;
 }
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* HEADER */
-header {
-    background-color: #005f73;
-    color: white;
-    padding: 15px 0;
-}
-
-.header-content {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* HERO */
-#hero {
-    background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60");
-    background-size: cover;
-    background-position: center;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.hero-button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #ee6c4d;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.hero-button:hover {
-    background-color: #d64b2a;
-}
-
-/* SECTIONS */
-section {
-    padding: 40px;
-    text-align: center;
-}
-
-#services {
-    background-color: white;
-}
-
+/* SERVICE HOVER */
 .service-box {
-    display: inline-block;
-    margin: 20px;
-}
-
-.service-box img {
-    width: 80px;
-}
-
-#about {
-    background-color: #eaeaea;
-}
-
-.about-img {
-    width: 60%;
-    margin: 20px 0;
-    border-radius: 10px;
-}
-
-/* CONTACT */
-#contact {
-    background-color: white;
-}
-
-#contact p {
-    margin: 5px 0;
-    font-size: 15px;
-}
-
-input, textarea {
-    width: 260px;
-    padding: 8px;
-}
-
-input[type="submit"] {
-    background-color: #005f73;
-    color: white;
-    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
-    padding: 8px 15px;
+}
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-input[type="submit"]:hover {
-    background-color: #003f4d;
-}
-
-/* FOOTER */
-footer {
-    background-color: #005f73;
+/* TOAST */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
     color: white;
-    text-align: center;
-    padding: 10px;
+    padding: 12px 18px;
+    border-radius: 5px;
+    animation: fadeInOut 3s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10%,90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; }
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #222;
+}
+
+.dark-mode section {
+    background-color: #1e1e1e;
 }
