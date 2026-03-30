@@ -1,16 +1,113 @@
-/* NAV ACTIVE */
-nav ul li a.active {
-    border-bottom: 2px solid #ee6c4d;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* SERVICE HOVER */
-.service-box {
-    transition: transform 0.3s, box-shadow 0.3s;
+body {
+    background: #1f2937;
+    color: #f9fafb;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    background: #111827;
+    padding: 15px;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.hero-text span {
+    color: #60a5fa;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
 }
-.service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+/* SERVICES */
+.services {
+    padding: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background: #374151;
+    padding: 20px;
+    border-radius: 15px;
+    width: 150px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 60px;
+}
+
+/* ABOUT */
+.about {
+    padding: 50px;
+}
+
+.about img {
+    width: 450px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+/* CONTACT */
+.contact {
+    padding: 50px;
+}
+
+input, textarea {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    background: #374151;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: #111827;
+    padding: 10px;
 }
 
 /* TOAST */
@@ -18,30 +115,7 @@ nav ul li a.active {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #333;
-    color: white;
-    padding: 12px 18px;
+    background: #3b82f6;
+    padding: 10px 15px;
     border-radius: 5px;
-    animation: fadeInOut 3s ease;
-}
-
-@keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(20px); }
-    10%,90% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; }
-}
-
-/* DARK MODE */
-.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-mode header,
-.dark-mode footer {
-    background-color: #222;
-}
-
-.dark-mode section {
-    background-color: #1e1e1e;
 }
