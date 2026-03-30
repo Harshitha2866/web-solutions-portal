@@ -10,67 +10,75 @@
 <header>
     <div class="header-content">
         <h1>Web Solutions Portal</h1>
+
         <nav>
             <ul>
+                <li><a href="#" onclick="scrollToSection('hero')">Home</a></li>
                 <li><a href="#" onclick="scrollToSection('services')">Services</a></li>
                 <li><a href="#" onclick="scrollToSection('about')">About</a></li>
                 <li><a href="#" onclick="scrollToSection('contact')">Contact</a></li>
             </ul>
         </nav>
+
+        <!-- Dark Mode Button -->
+        <button onclick="toggleDarkMode()">🌙</button>
     </div>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section id="hero">
     <div class="hero-content">
         <h2>Welcome to Web Solutions Portal</h2>
-        <p>Basic and attractive website built using HTML, CSS and JavaScript.</p>
+        <p id="typing-text">Basic and attractive website built using HTML, CSS and JavaScript.</p>
         <button class="hero-button" onclick="showMessage()">Get Started</button>
     </div>
 </section>
 
-<!-- SERVICES SECTION -->
+<!-- SERVICES -->
 <section id="services">
     <h2>Our Services</h2>
 
     <div class="service-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Web Design">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
         <p>Web Design</p>
     </div>
 
     <div class="service-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JavaScript">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png">
         <p>JavaScript Basics</p>
     </div>
 
     <div class="service-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Responsive">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">
         <p>Responsive Layout</p>
     </div>
+
+    <!-- Counter -->
+    <h3>Projects Completed: <span id="counter">0</span></h3>
 </section>
 
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section id="about">
     <h2>About Us</h2>
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=60" class="about-img" alt="About Image">
+
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="about-img">
+
     <p>
         Web Solutions Portal is a basic interactive website developed to demonstrate
         fundamental web development concepts using HTML, CSS, and JavaScript.
     </p>
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contact Us</h2>
 
-    <!-- Contact Details -->
     <p><strong>Email:</strong> contact@websolutionsportal.com</p>
     <p><strong>Phone:</strong> +91 98765 43210</p>
     <p><strong>Location:</strong> Andhra Pradesh, India</p>
 
     <br>
 
-    <!-- Contact Form -->
     <form onsubmit="return validateForm()">
         <input type="text" id="name" placeholder="Your Name"><br><br>
         <textarea id="message" placeholder="Your Message"></textarea><br><br>
@@ -83,5 +91,6 @@
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
